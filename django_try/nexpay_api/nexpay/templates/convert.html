@@ -1,0 +1,13 @@
+<form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <label for="amount">Amount:</label>
+    <input type="text" name="amount" id="amount">
+    <br>
+    <label for="from_currency">From currency:</label>
+    <input type="text" name="from_currency" id="from_currency">
+    <br>
+    <label for="to_currency">To currency:</label>
+    <input type="text" name="to_currency" id="to_currency">
+    <br>
+    <input type="submit" value="Convert">
+  </form>
